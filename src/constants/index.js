@@ -21,6 +21,8 @@ import {
   project2,
   project3,
   project4,
+  project5,
+  project6,
   threejs,
 } from '../assets';
 
@@ -145,7 +147,7 @@ const experiences = [
       'Managed databases using MySQL, PostgreSQL, and MongoDB for efficient data storage and retrieval.',
       'Employed version control systems like Git for code collaboration and management.',
       'Conducted code reviews and implemented best practices to maintain code quality and consistency.',
-      'Troubleshooted and resolved front-end and back-end issues to ensure smooth operation of web applications.'
+      'Troubleshooted and resolved front-end and back-end issues to ensure smooth operation of web applications.',
     ],
   },
 ];
@@ -179,92 +181,151 @@ const testimonials = [
 
 const projects = [
   {
-    name: 'Next.js Store Draft',
+    name: 'IGL Indian Gaming League',
     description:
-      'Discover the cutting-edge of web design with our exclusive draft site. Here, innovation meets creativity as we showcase the potential of Next.js for building dynamic, high-performance online stores.',
+      'Indian Gaming League (IGL) is a competitive e-sports platform that connects tournament organizers, players, and spectators. Founded by a team of gamers who believe in providing Indian players with a stage to launch their gaming careers, IGL offers tournaments across various games and platforms.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'React.js',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'Typescript',
         color: 'green-text-gradient',
       },
       {
-        name: 'tailwind',
+        name: 'TailwindCSS',
         color: 'pink-text-gradient',
       },
     ],
     image: project1,
-    view: 'https://temp-nextjs-store-draft-omega.vercel.app/',
-    source_code_link: 'https://github.com/KunjYadav/temp-nextjs-store-draft',
+    view: 'https://iglnetwork.com/',
   },
+
   {
-    name: 'Next-Gen E-Commerce',
+    name: 'GameGods',
     description:
-      'Step into the future of online shopping with our cutting-edge e-commerce platform, powered by Next.js13. We bring you a seamless, fast, and intuitive shopping experience that caters to all your needs.',
+      'GameGods is a Web3-based social networking platform dedicated to gamers and the gaming community. Developed by Avalon Tech Inc., a U.S.-based tech startup, GameGods aims to create a global social network for gamers through its application and website. Game Gods is merely a gaming and technology platform, and you are solely and entirely responsible for the legal and tax compliance of all transactions.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'React.js',
         color: 'blue-text-gradient',
       },
       {
-        name: 'stripe',
+        name: 'Typescript',
         color: 'green-text-gradient',
       },
       {
-        name: 'tailwind',
+        name: 'TailwindCSS',
         color: 'pink-text-gradient',
       },
     ],
     image: project2,
-    view: 'https://ecommerce-next13js.vercel.app/',
-    source_code_link: 'https://github.com/KunjYadav/ecommerce-next13',
+    view: 'https://www.gamegods.com/',
   },
   {
-    name: 'Image Gallery',
+    name: 'ISBM University',
     description:
-      'It offers users the ability to explore and download various pictures, catering to different themes and purposes. The site has a clean, user-friendly design, making it easy to browse through the images available.',
+      "ISBM University's modern and vibrant campus is designed to facilitate an engaging learning environment. The institution also emphasizes global exposure through international partnerships, aiming to provide students with diverse perspectives and a broader educational experience. Our university offers a variety of courses to meet the needs of every student. From Business to Biology, and from Psychology to Politics.",
     tags: [
       {
-        name: 'react',
+        name: 'React.js',
         color: 'blue-text-gradient',
       },
       {
-        name: 'axios',
+        name: 'Typescript',
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'TailwindCSS',
         color: 'pink-text-gradient',
       },
     ],
     image: project3,
-    view: 'https://kvite-images.netlify.app/',
-    source_code_link: 'https://github.com/KunjYadav/temp-vite-images',
+    view: 'https://isbmuniversity.edu.in/',
   },
+  // {
+  //   name: '',
+  //   description: '',
+  //   tags: [
+  //     {
+  //       name: 'nextjs',
+  //       color: 'blue-text-gradient',
+  //     },
+  //     {
+  //       name: 'stripe',
+  //       color: 'green-text-gradient',
+  //     },
+  //     {
+  //       name: 'tailwind',
+  //       color: 'pink-text-gradient',
+  //     },
+  //   ],
+  //   image: ,
+  //   view: '',
+  // },
   {
-    name: 'Comfy Home Essentials',
+    name: "World's 1st ICT channel B2B platform",
     description:
-      'Transform your living space into a haven of comfort and style with our curated selection of home essentials. At KComfy, we believe that your home should be a reflection of your unique taste and personality.',
+      "ICT Circle's platform is designed to reduce operational costs, enhance market reach, and provide real-time business analytics, empowering businesses to make informed decisions and foster growth within the ICT industry.",
     tags: [
       {
-        name: 'react',
+        name: 'React.js',
         color: 'blue-text-gradient',
       },
       {
-        name: 'daisyui',
+        name: 'Typescript',
         color: 'green-text-gradient',
       },
       {
-        name: 'tailwind',
+        name: 'TailwindCSS',
         color: 'pink-text-gradient',
       },
     ],
     image: project4,
-    view: 'https://kcomfy-store.netlify.app/',
-    source_code_link: 'https://github.com/KunjYadav/comfy-store',
+    view: 'https://www.ictcircle.com/india',
+  },
+  {
+    name: 'Online Insurance Portal Dubai',
+    description:
+      'The website is an online insurance portal based in Dubai, offering a range of insurance services to its users. The platform provides various types of insurance, including motor and yacht insurance, allowing users to obtain coverage for their vehicles and vessels.',
+    tags: [
+      {
+        name: 'React.js',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'Typescript',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'TailwindCSS',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: project5,
+    view: 'https://lmpfrontend.handsintechnology.in/',
+  },
+  {
+    name: 'Next-Gen E-Commerce',
+    description:
+      'It leverages modern web technologies Next.js and Tailwind CSS to deliver a seamless shopping experience. The site is optimized for speed, SEO, and dynamic content rendering, making it an excellent choice for online stores. It also supports integrations with various commerce providers, offering flexibility and scalability for businesses.',
+    tags: [
+      {
+        name: 'Next.js',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'Stripe',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'TailwindCSS',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: project6,
+    view: 'https://ecommerce-next13js.vercel.app/',
   },
 ];
 
