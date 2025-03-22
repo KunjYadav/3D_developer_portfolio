@@ -2,9 +2,14 @@
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
+import { github } from '../assets';
 import SectionWrapper from '../hoc/SectionWrapper';
 import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import ReactReadMoreReadLess from 'react-read-more-read-less';
 
 const ProjectCard = ({ index, name, description, tags, image, view }) => {
   return (
@@ -17,20 +22,40 @@ const ProjectCard = ({ index, name, description, tags, image, view }) => {
         }}
         className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
       >
-        <div
-          className='relative w-full h-[230px]'
-          onClick={() => window.open(view, '_blank')}
-        >
+        <div className='relative w-full h-[230px]'>
           <img
             src={image}
             alt='project_image'
-            className='w-full h-full object-cover rounded-2xl'
+            className='w-full h-full object-cover rounded-xl'
           />
+
+          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+            <div
+              onClick={() => window.open(view, '_blank')}
+              className='orange-green-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+            >
+              <img
+                src={github}
+                alt='view code'
+                className='w-1/2 h-1/2 object-contain rounded-lg'
+              />
+            </div>
+          </div>
         </div>
 
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <h3 className='text-white font-bold text-[20px]'>{name}</h3>
+          <p className='mt-2 text-secondary text-[14px]'>
+            <ReactReadMoreReadLess
+              charLimit={50}
+              readMoreText={'Read more ▼'}
+              readLessText={'Read less ▲'}
+              readMoreClassName={'text-yellow-100'}
+              readLessClassName={'text-yellow-100'}
+            >
+              {description}
+            </ReactReadMoreReadLess>
+          </p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
@@ -49,6 +74,35 @@ const ProjectCard = ({ index, name, description, tags, image, view }) => {
 };
 
 const Works = () => {
+  var settings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 820,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -69,10 +123,12 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+      <div className='mt-20 gap-7'>
+        <Slider {...settings}>
+          {projects.map((project, index) => (
+            <ProjectCard key={`project-${index}`} index={index} {...project} />
+          ))}
+        </Slider>
       </div>
     </>
   );

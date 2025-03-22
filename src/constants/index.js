@@ -265,7 +265,7 @@ const projects = [
   //   view: '',
   // },
   {
-    name: "World's 1st ICT channel B2B platform",
+    name: "ICT channel B2B platform",
     description:
       "ICT Circle's platform is designed to reduce operational costs, enhance market reach, and provide real-time business analytics, empowering businesses to make informed decisions and foster growth within the ICT industry.",
     tags: [
