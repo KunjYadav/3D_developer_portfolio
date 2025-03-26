@@ -2,7 +2,6 @@
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
-import { webpage } from '../assets';
 import SectionWrapper from '../hoc/SectionWrapper';
 import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
@@ -24,23 +23,11 @@ const ProjectCard = ({ index, name, description, tags, image, view }) => {
       >
         <div className='relative w-full h-[230px]'>
           <img
+            onClick={() => window.open(view, '_blank')}
             src={image}
             alt='project_image'
             className='w-full h-full object-cover rounded-xl'
           />
-
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            <div
-              onClick={() => window.open(view, '_blank')}
-              className='orange-green-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-            >
-              <img
-                src={webpage}
-                alt='view code'
-                className='w-1/2 h-1/2 object-contain rounded-lg'
-              />
-            </div>
-          </div>
         </div>
 
         <div className='mt-5'>
